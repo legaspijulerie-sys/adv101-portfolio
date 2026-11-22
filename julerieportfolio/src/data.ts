@@ -13,7 +13,7 @@ export const profile = {
   photoPath: "/profile.jpg",
   // true  = the photo slot can be clicked to choose a picture (use this while building).
   // false = visitors just see the photo, with no edit controls (set this before you publish).
-  photoEditable: true,
+  photoEditable: false,
   // Words that get typed out under your name on the About page.
   roles: ["2nd Year IT Student", "Java Learner", "Web Builder", "Android Beginner"],
   bio: [

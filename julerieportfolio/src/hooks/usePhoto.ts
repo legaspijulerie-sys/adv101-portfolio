@@ -85,6 +85,10 @@ export function usePhoto() {
     };
   }, []);
 
-  const src = uploaded ?? (fileOk ? profile.photoPath : null);
-  return { src, uploaded: uploaded !== null };
+  const src = profile.photoEditable
+    ? uploaded ?? (fileOk ? profile.photoPath : null)
+    : fileOk
+      ? profile.photoPath
+      : null;
+  return { src, uploaded: profile.photoEditable && uploaded !== null };
 }
